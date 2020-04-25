@@ -185,8 +185,6 @@ named!(
             >> previous_peep_pressure: be_u16
             >> sep
             >> current_alarm_codes: u8_array
-            >> sep
-            >> previous_alarm_codes: u8_array
             >> end
             >> (TelemetryMessage::MachineStateSnapshot(MachineStateSnapshot {
                 version: software_version.to_string(),
@@ -200,7 +198,6 @@ named!(
                 previous_plateau_pressure,
                 previous_peep_pressure,
                 current_alarm_codes,
-                previous_alarm_codes,
             }))
     )
 );
